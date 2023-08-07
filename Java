@@ -1,0 +1,28 @@
+```java
+package com.example.minecraftplugin;
+
+import org.bukkit.event.EventHandler;
+import org.bukkit.event.Listener;
+import org.bukkit.event.player.PlayerJoinEvent;
+import org.bukkit.plugin.java.JavaPlugin;
+
+public class MinecraftPlugin extends JavaPlugin implements Listener {
+
+    @Override
+    public void onEnable() {
+        getLogger().info("Plugin ativado!");
+        getServer().getPluginManager().registerEvents(this, this);
+    }
+
+    @Override
+    public void onDisable() {
+        getLogger().info("Plugin desativado!");
+    }
+
+    @EventHandler
+    public void onPlayerJoin(PlayerJoinEvent event) {
+        String playerName = event.getPlayer().getName();
+        event.getPlayer().sendMessage("Bem-vindo ao servidor, " + playerName + "!");
+    }
+}
+```
