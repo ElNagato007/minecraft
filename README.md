@@ -22,9 +22,7 @@
         }
         .image img {
             max-width: 400px;
-            height: auto;
-        }
-    </style>
+        
 </head>
 <body>
     <h1>Bem-vindo ao Mundo do Minecraft!</h1>
